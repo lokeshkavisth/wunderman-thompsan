@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* variables */
+:root {
+  /* fonts */
+  --ff-main: "Poppins", sans-serif;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* colors */
+  --clr-blue: #38b6ff;
+  --clr-black: #0c0c0c;
+  --clr-gray: #3b3b3b;
+  --clr-white: #ffffff;
+
+  /* spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+
+  /* font size */
+  --fs-sm: 0.8rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-xxl: 3rem;
+}
+
+/* Reset */
+* {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font: inherit;
+  font-family: var(--ff-main);
+  font-weight: var(--fw-400);
+  vertical-align: baseline;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: var(--space-md);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+
+a,
+img,
+data,
+span,
+input,
+button,
+select,
+ion-icon,
+textarea,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-700);
+}
+h2 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-600);
+}
+h3 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-600);
+}
+h4 {
+  font-size: var(--fs-sm);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input,
+button,
+select,
+textarea {
+  background: none;
+  font-size: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  max-width: max-content;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+hr {
+  background-color: #cccccc;
+  height: 0.1rem;
+}
+
+body {
+  font-size: inherit;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  vertical-align: baseline;
+  background-color: var(--clr-white);
+  position: relative;
+}
+
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+/* Ensures cross-compatibility on different browsers for scrollbar */
+::-webkit-scrollbar {
+  width: 0.409rem;
+}
+::-moz-scrollbar {
+  width: 0.409rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-moz-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background-color: coral;
+}
+::-moz-scrollbar-thumb {
+  border-radius: 2rem;
+  background-color: coral;
+}
+
+/* General CSS */
+
+.btn {
+  padding: var(--space-xs) var(--space-sm);
+  border: 0.13rem solid var(--clr-black);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--clr-gray);
+  font-weight: var(--fw-600);
+  /* background-color: transparent; */
+}
+
+.container {
+  margin-block: var(--space-xxl);
+  padding-inline: var(--space-lg);
+}
+
+/* Navbar */
+
+header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  padding: var(--space-xs) var(--space-lg);
+  background-color: var(--clr-white);
+  box-shadow: #c4c4c4 0 0.1rem 0.25rem;
+}
+
+.hero {
+  background: no-repeat center
+    url("https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero-Slim-Variation?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=732&qlt=85&fit=constrain");
+  background-size: cover;
+  height: clamp(30rem, 40vh, 40rem);
+  padding: 0 var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+/* Solution */
+.solution {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxl);
+  background: linear-gradient(to bottom, transparent, #ececec7e 90%);
+  padding-block: var(--space-md);
+}
+
+.solution h2 {
+  text-align: center;
+  color: var(--clr-blue);
+}
+.card__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.card__wrapper .card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Edu Cloud */
+.edu__cloud {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxl);
+}
+
+.pivot__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxl);
+}
+
+.edu__pivot {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.pivot__item.active {
+  border-bottom: var(--clr-blue) solid 0.13rem;
+}
+
+.pivot__title {
+  text-align: center;
+  color: var(--clr-blue);
+}
+
+.pivot__item {
+  cursor: pointer;
+}
+
+.pivot__content {
+  display: none;
+}
+
+.pivot__content.active {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pivot__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.pivot__image {
+  width: clamp(30rem, 50vw, 40rem);
+}
+
+.pivot__image img {
+  border-radius: 0.5rem;
+}
+
+.pivot__icon {
+  font-size: var(--fs-lg);
+}
+
+/* Institute */
+.institute {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxl);
+}
+
+.institute h2 {
+  text-align: center;
+  color: var(--clr-blue);
+}
+
+.institute .img_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.institute .img_wrapper div {
+  width: clamp(10rem, 20vw, 12rem);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.137), 0 6px 20px 0 rgba(0, 0, 0, 0.11);
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  padding-block: var(--space-md);
+  background: var(--clr-blue);
+}
+
+/* Scroll Top */
+.scroll__top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 3rem;
+  height: 3rem;
+  /* border-radius: 50%; */
+  background-color: #e9e9e9;
+  display: none;
+  place-content: center;
+  font-size: 1.5rem;
+}
+.scroll__top a {
+  color: var(--clr-black);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1106px) {
+  .card__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 908px) {
+  .card__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 670px) {
+  .card__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pivot__content {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .pivot__image {
+    width: 100%;
+  }
+
+  .institute .img_wrapper {
+    flex-wrap: wrap;
+  }
+}
